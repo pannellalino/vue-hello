@@ -13,8 +13,16 @@ createApp({
     return{
       messaggio: 'Ciao',
       coloreTesto: '',
+      title: 'Best striker',
       image: "./img/del-piero.jpg",
-      imageChange: "./img/pirlo.jpg"
+      player: "Del Piero"
     }
-  }
+  },
+  methods: {
+    changePlayer() {
+      this.title = 'Best midfielder';
+      this.image = './img/pirlo.jpg';
+      this.player = 'Pirlo';
+    }
+  } 
 }).mount('#app')
