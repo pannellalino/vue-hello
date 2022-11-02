@@ -6,12 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/vue@3"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css' integrity='sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==' crossorigin='anonymous'/>
   <title>vue-hello</title>
 </head>
 <body>
   
   <div id="app">
     <h1 :class="coloreTesto">{{messaggio}}</h1>
+    <button @click="coloreTesto = 'blu'">colore</button>
+
+    <hr>
+    
+    <div class="card" style="width: 18rem;">
+      <img :src="image" :src="imageChange" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Best striker</h5>
+        <h5 v-show="" class="card-title">Best midfielder</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a @click="image = (imageChange)" href="#" class="btn btn-primary">Best players</a>
+      </div>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
